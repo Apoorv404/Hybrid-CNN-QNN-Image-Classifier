@@ -1,7 +1,6 @@
-# Hybrid-CNN-QNN-Image-Classifier
+# Hybrid CNN–QNN for Indian Bay Leaf Classification (PyTorch + PennyLane)
 This repository is part of my final year capstone project which is bay leaf classification using quantum computing where I introduced hybrid CNN-QNN model for higher accuracy.
 
-# Hybrid CNN–QNN for Indian Bay Leaf Classification (PyTorch + PennyLane)
 
 ## License
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).  
@@ -135,4 +134,4 @@ If you use this repository, please cite:
 - PyTorch (https://pytorch.org/)
 - PennyLane (https://pennylane.ai/)
 - Dataset: Indian Bay Leaf (Tejpatta) Balanced Dataset
-PAYGUDE, PRIYANKA; CHAVAN, PRASHANT (2024), “Indian Bay Leaves or Cinnamomum Tamala Leaves Dataset”, Mendeley Data, V1, doi: 10.17632/s9t7sr52wg.1
+  PAYGUDE, PRIYANKA; CHAVAN, PRASHANT (2024), “Indian Bay Leaves or Cinnamomum Tamala Leaves Dataset”, Mendeley Data, V1, doi: 10.17632/s9t7sr52wg.1
