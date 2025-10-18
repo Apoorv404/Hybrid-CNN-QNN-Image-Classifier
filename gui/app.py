@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
@@ -95,12 +96,21 @@ class HybridCNNQNN(nn.Module):
 @st.cache_resource
 def load_model():
     model = HybridCNNQNN()
-    model.load_state_dict(torch.load("hybrid_quantum_model.pth", map_location="cpu"))
-    model.eval()
-    return model
+    model_path = os.path.join(os.path.dirname(__file__), "hybrid_quantum_model.pth")
+    
+    if os.path.exists(model_path):
+        try:
+            model.load_state_dict(torch.load(model_path, map_location="cpu"))
+            model.eval()
+            return model
+        except Exception as e:
+            st.error(f"Error loading model weights: {e}")
+            return None
+    else:
+        st.error(f"Model file not found at: {model_path}")
+        return None
 
 model = load_model()
-
 
 # ---- Preprocessing ----
 transform = transforms.Compose([
