@@ -1,6 +1,6 @@
-streamlit==1.38.0
-torch==2.3.0
-torchvision==0.18.0
-pennylane==0.39.0
-pennylane-lightning==0.39.0
-Pillow==10.3.0
+streamlit
+torch
+torchvision
+pennylane
+pennylane-lightning
+Pillow
