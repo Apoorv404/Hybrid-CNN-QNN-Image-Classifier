@@ -123,7 +123,8 @@ class_labels = ["Disease", "Dry_Leaf", "Healthy"]
 
 #  ---- Sidebar ----
 with st.sidebar:
-    st.image("logo.png", use_container_width=True)
+    logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
+    st.image(logo_path, use_container_width=True)
     st.markdown("## 🌿 Hybrid Quantum Classifier")
     st.markdown("""
     **Developed by:** Apoorv Jadhav  
@@ -190,7 +191,8 @@ with tab1:
 
 # ---- TAB 2: Model Architecture ----
 with tab2:
-    st.image("model_architecture.png", caption="Hybrid CNN + QNN Architecture", use_container_width=True)
+    model_architecture_path = os.path.join(os.path.dirname(__file__), "model_architecture.png")
+    st.image(model_architecture_path, caption="Hybrid CNN + QNN Architecture", use_container_width=True)
     st.markdown("""
     **Description:**  
     - CNN feature extractor with two convolutional layers  
@@ -201,8 +203,15 @@ with tab2:
 
 # ---- TAB 3: Model Metrics ----
 with tab3:
+    base_path = os.path.dirname(__file__)
+    image_paths = [
+        os.path.join(base_path, "training.png"),
+        os.path.join(base_path, "validation.png"),
+        os.path.join(base_path, "confusion_matrix.png")
+    ]
+
     st.image(
-        ["training.png", "validation.png", "confusion_matrix.png"],
+        image_paths,
         caption=["Training Curve", "Validation Curve", "Confusion Matrix"],
         use_container_width=True
     )
