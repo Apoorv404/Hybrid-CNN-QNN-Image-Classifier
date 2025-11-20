@@ -127,7 +127,7 @@ with st.sidebar:
     st.image(logo_path, use_container_width=True)
     st.markdown("## 🌿 Hybrid Quantum Classifier")
     st.markdown("""
-    **Developed by:** Apoorv Jadhav  
+    **Developed by:** Group No. 8  
     **Model:** Hybrid CNN + QNN  
     **Frameworks:** PyTorch + PennyLane  
     """)
